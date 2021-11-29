@@ -1,4 +1,4 @@
-//Copyright by C++_developers1488
+//Copyright 2021 by Winter Solider
 
 #ifndef INCLUDE_CHECK_HPP_
 #define INCLUDE_CHECK_HPP_

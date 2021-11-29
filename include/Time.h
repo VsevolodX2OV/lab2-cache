@@ -1,4 +1,4 @@
-//Copyright by C++_developers1488
+//Copyright 2021 by Winter Solider
 
 #ifndef INCLUDE_TIME_HPP_
 #define INCLUDE_TIME_HPP_
