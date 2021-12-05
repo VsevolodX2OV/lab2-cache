@@ -5,8 +5,7 @@
 #include <random>
 #include <sstream>
 
-char* Check::initArray()
-{
+char* Check::initArray() {
   std::random_device rd;
   std::mt19937_64 mt(rd());
   std::uniform_int_distribution<int64_t> dist(0, Check::size);
@@ -16,8 +15,7 @@ char* Check::initArray()
   return arr;
 }
 
-Check::Check(int i, Check_type t, int64_t s)
-{
+Check::Check(int i, Check_type t, int64_t s) {
   Check::id = i;
   Check::type = t;
   Check::size = s;
@@ -50,17 +48,18 @@ double Check::run() {
   delete[] arr;
   return time;
 }
+
 void Check::_forward(char* arr, char& k) {
   for (int64_t i = 0; i < Check::size; i += 16)
     k = arr[i];
 }
+
 void Check::_reverse(char* arr, char& k) {
   for (int64_t i = Check::size-1; i > 0; i -= 16)
     k = arr[i];
 }
 
-void Check::_random(char* arr, char& k)
-{
+void Check::_random(char* arr, char& k) {
   std::random_device rd;
   std::mt19937_64 mt(rd());
   std::uniform_int_distribution<int64_t> dist(0, Check::size/16);

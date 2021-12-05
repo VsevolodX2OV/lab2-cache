@@ -4,8 +4,7 @@
 #include <string>
 #include <cmath>
 
-std::string Byte_value(int64_t value)
-{
+std::string Byte_value(int64_t value) {
   if (value <= 1024)
     return std::to_string(value) + "b";
   if (value >= 1024 && value < pow(1024, 2))

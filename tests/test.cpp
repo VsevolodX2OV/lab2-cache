@@ -8,8 +8,7 @@
 #include "Time.h"
 
 
-TEST(ExperimentTest, printTest)
-{
+TEST(ExperimentTest, printTest) {
   Check e(0, _reverse, 838860);
   e.run();
   std::stringstream ss;
@@ -66,8 +65,7 @@ TEST(ExperimentTest, randomTest) {
     FAIL() << e.what();
   }
 }
-TEST(ExperimentTest, runTest)
-{
+TEST(ExperimentTest, runTest) {
   try {
     Check e(0, _reverse, 838860);
     int result = e.run();

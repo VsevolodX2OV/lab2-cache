@@ -17,8 +17,7 @@ std::ostream & operator<<(std::ostream & os, Check_type const & type) {
   }
   return os;
 }
-std::string to_string(Check_type type)
-{
+std::string to_string(Check_type type) {
   std::stringstream ss;
   switch (type) {
     case _random:
