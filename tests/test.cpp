@@ -8,7 +8,7 @@
 #include "Time.h"
 
 
-TEST(ExperimentTest, printTest) {
+TEST(ExperimentTest, PrintTest) {
   Check e(0, _reverse, 838860);
   e.run();
   std::stringstream ss;
@@ -23,7 +23,7 @@ TEST(ExperimentTest, printTest) {
   std::string s2 = ss.str();
   ASSERT_EQ(s2, s);
 }
-TEST(ExperimentTest, forwardTest) {
+TEST(ExperimentTest, ForwardTest) {
   try {
     Check e(0, _random, 80);
     char* arr = e.initArray();
@@ -37,7 +37,7 @@ TEST(ExperimentTest, forwardTest) {
     FAIL() << e.what();
   }
 }
-TEST(ExperimentTest, reverseTest) {
+TEST(ExperimentTest, ReverseTest) {
   try {
     Check e(0, _random, 80);
     char* arr = e.initArray();
@@ -51,7 +51,7 @@ TEST(ExperimentTest, reverseTest) {
     FAIL() << e.what();
   }
 }
-TEST(ExperimentTest, randomTest) {
+TEST(ExperimentTest, RandomTest) {
   try {
     Check e(0, _random,  80);
     char* arr = e.initArray();
@@ -65,7 +65,7 @@ TEST(ExperimentTest, randomTest) {
     FAIL() << e.what();
   }
 }
-TEST(ExperimentTest, runTest) {
+TEST(ExperimentTest, RunTest) {
   try {
     Check e(0, _reverse, 838860);
     int result = e.run();
@@ -79,7 +79,7 @@ TEST(ExperimentTest, runTest) {
   }
 }
 
-TEST(InvestigationTest, constructorTest) {
+TEST(InvestigationTest, ConstructorTest) {
   try {
     std::vector<long> size = {838860, 1677721, 3355443};
     Time i(_reverse, size);
